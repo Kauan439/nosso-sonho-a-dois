@@ -101,10 +101,34 @@ h2 {
     font-weight:bold;
     transition:0.3s;
 }
+@media screen and (max-width:768px){
 
-.botao-whats:hover{
-    transform:scale(1.05);
-}
-body{
-    border:10px solid red;
+    header h1{
+        font-size:2.3rem;
+    }
+
+    .sobre{
+        flex-direction:column;
+        text-align:center;
+        gap:20px;
+    }
+
+    .sobre img{
+        width:90%;
+        max-width:320px;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+        max-width:320px;
+    }
+
+    body{
+        overflow-x:hidden;
+    }
 }

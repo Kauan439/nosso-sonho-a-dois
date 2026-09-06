@@ -1,48 +1,80 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff8f6;
-    color: #5a2d1d;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header {
-    background: linear-gradient(135deg, #f8d9dd, #f6c8cf);
-    text-align: center;
-    padding: 50px 20px;
+body{
+    font-family:Arial, sans-serif;
+    background:#fff8f6;
+    color:#5a2d1d;
+    overflow-x:hidden;
 }
 
-header h1 {
-    color: #8a2042;
-    font-size: 3rem;
-    margin-bottom: 10px;
+/* TOPO */
+
+header{
+    background:linear-gradient(135deg,#f8d9dd,#f6c8cf);
+    text-align:center;
+    padding:80px 20px;
 }
 
-header p {
-    font-size: 1.2rem;
+header h1{
+    color:#8a2042;
+    font-size:4rem;
+    margin-bottom:15px;
 }
 
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
+header p{
+    font-size:1.4rem;
+    margin-bottom:25px;
 }
 
-h2 {
-    color: #8a2042;
+/* BOTÕES */
+
+.botao-whats{
+    display:inline-block;
+    margin-top:15px;
+    padding:18px 40px;
+    background:#8a2042;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    font-size:18px;
+    transition:0.3s;
 }
-.sobre{
-    max-width:1000px;
+
+.botao-whats:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* SEÇÕES */
+
+section{
+    max-width:1200px;
     margin:auto;
-    padding:60px 20px;
+    padding:70px 20px;
+}
+
+h2{
+    color:#8a2042;
+    margin-bottom:20px;
+}
+
+/* QUEM SOMOS */
+
+.sobre{
     display:flex;
     align-items:center;
-    gap:40px;
+    gap:50px;
 }
 
 .sobre img{
-    width:320px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    width:350px;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
 .sobre div{
@@ -51,17 +83,20 @@ h2 {
 
 .sobre p{
     font-size:18px;
-    line-height:1.8;
+    line-height:1.9;
+    margin-bottom:15px;
 }
+
+/* CARDÁPIO */
+
 .cardapio{
     background:#f8d9dd;
-    padding:80px 20px;
     text-align:center;
 }
 
 .cardapio h2{
+    font-size:42px;
     margin-bottom:40px;
-    font-size:40px;
 }
 
 .cards{
@@ -73,49 +108,112 @@ h2 {
 
 .card{
     background:white;
-    width:250px;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    width:260px;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
 }
 
 .card h3{
     color:#8a2042;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.6;
 }
 
 .card span{
     display:block;
-    margin-top:15px;
-    font-size:22px;
+    margin-top:18px;
+    font-size:24px;
     font-weight:bold;
     color:#8a2042;
 }
-.botao-whats{
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 35px;
+
+/* META */
+
+.meta{
+    text-align:center;
+}
+
+.meta p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* AVALIAÇÕES */
+
+.avaliacoes{
+    background:#fff;
+    text-align:center;
+}
+
+/* CONTATO */
+
+.contato{
+    text-align:center;
+    background:#fdf1f3;
+}
+
+/* RODAPÉ */
+
+footer{
     background:#8a2042;
     color:white;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-    transition:0.3s;
+    text-align:center;
+    padding:25px;
 }
+
+/* WHATS FIXO */
+
+.whats-fixo{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    z-index:999;
+}
+
+/* RESPONSIVO */
+
 @media screen and (max-width:768px){
 
+    header{
+        padding:60px 20px;
+    }
+
     header h1{
-        font-size:2.3rem;
+        font-size:2.8rem;
+    }
+
+    header p{
+        font-size:1.1rem;
     }
 
     .sobre{
         flex-direction:column;
         text-align:center;
-        gap:20px;
+        gap:25px;
     }
 
     .sobre img{
         width:90%;
-        max-width:320px;
+        max-width:340px;
     }
 
     .cards{
@@ -125,10 +223,14 @@ h2 {
 
     .card{
         width:90%;
-        max-width:320px;
+        max-width:340px;
     }
 
-    body{
-        overflow-x:hidden;
+    .cardapio h2{
+        font-size:32px;
+    }
+
+    h2{
+        font-size:30px;
     }
 }
